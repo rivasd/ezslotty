@@ -21,7 +21,6 @@ class App extends Component {
 
           <div style={ {margin : 'auto auto'}}>
             <Bandit icons={icons} ></Bandit>
-            <button id="spin">Spin moi ça !</button>
           </div>
           
 
