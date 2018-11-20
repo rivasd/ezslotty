@@ -51,7 +51,7 @@ code {
 
 .App-header h1{
   
-  margin: 20px 0px 10px 0px;
+  margin: 20px 0px 1\0px 0px;
   font-size: 3em;
   
 }
@@ -193,6 +193,20 @@ button:active{
   background: #a004a0;
   border-color: #ffffff;
 }
+
+@keyframes winner{
+  from{
+    background-color: #1caa3f
+  }
+  to{
+    background-color: gold;
+  }
+}
+
+.win {
+  animation: winner 1s steps(5, start) infinite;
+}
+
 
 @keyframes App-logo-spin {
   from {

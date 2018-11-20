@@ -135,6 +135,7 @@
         if(count == 0){
           if (mCasino1.visibleTile == mCasino2.visibleTile && mCasino2.visibleTile == mCasino3.visibleTile){
             winaudio.play();
+            document.querySelector(".App").classList.add("win");
           }
           else if(mCasino1.visibleTile != mCasino2.visibleTile && mCasino2.visibleTile != mCasino3.visibleTile && mCasino1.visibleTile != mCasino3.visibleTile){
             cashaudio.play();
@@ -144,6 +145,10 @@
           }
         }
       });
+
+      winaudio.addEventListener('ended', () => {
+        document.querySelector(".App").classList.remove("win");
+      })
     
     </script>
   </body>
