@@ -51,15 +51,17 @@ code {
 
 .App-header h1{
   
-  margin: 20px 0px 1\0px 0px;
-  font-size: 3em;
+  margin: 20px 0px 10px 0px;
+  font-size: 3.5em;
+  font-weight: initial;
   
 }
 
 .App-header h2{
   
   margin: 5px 0px 0px 0px;
-  font-size: 20pt
+  font-size: 24pt;
+  font-weight: initial;
 }
 
 .App-footer {
