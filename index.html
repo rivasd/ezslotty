@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="slot.css">
+    <script src="slot.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div class="App">
+      <header class="App-header">
+        <h1>EZ SLOTTY</h1>
+        <h2>Le systeme de divertissement aleatoire FACILE a utiliser</h2>
+      </header>
+      <main class="App-main">
+
+        <div style="margin : auto auto;">
+            <div>
+                <div class="bandit">
+                    <div class="bandit-display">
+
+                            
+                            <div class="slotMachine" id="casino1">
+                                <div class="slot slot1" ></div>
+                                <div class="slot slot2" ></div>
+                                <div class="slot slot3" ></div>
+                                <div class="slot slot4" ></div>
+                                <div class="slot slot5" ></div>
+                                <div class="slot slot6" ></div>
+                            </div>
+                            <div class="slotMachine" id="casino2">
+                                <div class="slot slot1" ></div>
+                                <div class="slot slot2" ></div>
+                                <div class="slot slot3" ></div>
+                                <div class="slot slot4" ></div>
+                                <div class="slot slot5" ></div>
+                                <div class="slot slot6" ></div>
+                            </div>
+                            <div class="slotMachine" id="casino3">
+                                <div class="slot slot1" ></div>
+                                <div class="slot slot2" ></div>
+                                <div class="slot slot3" ></div>
+                                <div class="slot slot4" ></div>
+                                <div class="slot slot5" ></div>
+                                <div class="slot slot6" ></div>
+                            </div>
+
+                    </div>
+                    
+                </div>
+                <div class="btn">
+                    <button id="casinoShuffle">Spin moi ça!</button>
+                    <button id="casinoStop"> Wo de Wo!</button>
+                </div>
+                
+            </div>
+        </div>
+      </main>
+      <footer class="App-footer">
+        Un autre produit de marque EZ
+      </footer>
+    </div>
+    <script>
+      let count = 0;
+      const btnShuffle = document.querySelector('#casinoShuffle');
+      const btnStop = document.querySelector('#casinoStop');
+      const casino1 = document.querySelector('#casino1');
+      const casino2 = document.querySelector('#casino2');
+      const casino3 = document.querySelector('#casino3');
+      const mCasino1 = new SlotMachine(casino1, {
+        active: 0,
+        delay: 500
+      });
+      const mCasino2 = new SlotMachine(casino2, {
+        active: 1,
+        delay: 500
+      });
+      const mCasino3 = new SlotMachine(casino3, {
+        active: 2,
+        delay: 500
+      });
+
+      btnShuffle.addEventListener('click', () => {
+        count = 3;
+        mCasino1.shuffle(9999);
+        mCasino2.shuffle(9999);
+        mCasino3.shuffle(9999);
+      });
+
+      btnStop.addEventListener('click', () => {
+        switch(count) {
+          case 3:
+            mCasino1.stop();
+            break;
+          case 2:
+            mCasino2.stop();
+            break;
+          case 1:
+            mCasino3.stop();
+            break;
+        }
+        count--;
+      });
+    
+    </script>
+  </body>
+</html>

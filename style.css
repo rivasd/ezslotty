@@ -1,0 +1,165 @@
+
+@font-face {
+  font-family: Casino;
+  src: url(public/CoffeeTin\ Initials.ttf)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  background-color: #1caa3f;
+  grid-template-columns: 100px auto 100px;
+  grid-template-rows: 150px auto 50px;
+  grid-template-areas: 
+    "header header header"
+    ". main ."
+    "footer footer footer";
+    height: 100vh;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24pt;
+  font-family: "Casino", "serif";
+  color: rgb(255, 223, 40);
+  grid-area: header;
+}
+
+.App-header h1{
+  
+  margin: 20px 0px 0px 0px;
+  font-size: 2.5em;
+  
+}
+
+.App-header h2{
+  
+  margin: 5px 0px 0px 0px;
+  font-size: 20pt
+}
+
+.App-footer {
+  grid-area: footer;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.bandit{
+  background-image: url(public/img/machine.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: calc(50% + 30px);
+  text-align: center;
+  width: 533px;
+  height: 411px;
+  display: inline-block;
+}
+
+.bandit-display {
+  
+    display: inline-block;
+    width: 66%;
+    max-height: 39%;
+    align-items: center;
+    text-align: center;
+    top: 40%;
+    position: relative;
+    left: -0.45%;
+
+}
+
+#spin {
+  display: block;
+  text-align: center;
+  margin: auto auto;
+}
+
+.App-main {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slotMachine {
+  width: 30.333333%;
+  border: 5px solid #CF5178;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slot {
+
+    height: 100px;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position-x: 55%;
+}
+
+.slot1 {
+  background-image: url("public/img/ana.png")
+}
+
+.slot2 {
+  background-image: url("public/img/franck.png")
+}
+
+.slot3 {
+  background-image: url("public/img/gee.png")
+}
+
+.slot4 {
+  background-image: url("public/img/gui.png")
+}
+
+.slot5 {
+  background-image: url("public/img/raph.png")
+}
+
+.slot6 {
+  background-image: url("public/img/cha.png")
+}
+
+.btn {
+  display: block;
+  margin: auto;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
