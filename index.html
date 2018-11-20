@@ -73,6 +73,12 @@
                     <button id="casinoShuffle">Spin moi ça!</button>
                     <button id="casinoStop"> Wo de Wo!</button>
                 </div>
+                <audio id="turndown" src="public/win.mp3" autoplay="false">
+
+                </audio>
+                <audio id="lose" src="public/lose.mp3">
+
+                </audio>
                 
             </div>
         </div>
@@ -88,6 +94,9 @@
       const casino1 = document.querySelector('#casino1');
       const casino2 = document.querySelector('#casino2');
       const casino3 = document.querySelector('#casino3');
+      const winaudio = document.querySelector('#turndown');
+      const loseaudio = document.querySelector('#lose');
+
       const mCasino1 = new SlotMachine(casino1, {
         active: 0,
         delay: 500
@@ -121,6 +130,14 @@
             break;
         }
         count--;
+        if(count == 0){
+          if (mCasino1.visibleTile == mCasino2.visibleTile && mCasino2.visibleTile == mCasino3.visibleTile){
+            winaudio.play();
+          }
+          else{
+            loseaudio.play();
+          }
+        }
       });
     
     </script>
