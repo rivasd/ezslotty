@@ -46,6 +46,19 @@
   display: inline-block;
 }
 
+.bandit-display {
+  
+    display: inline-block;
+    width: 66%;
+    max-height: 39%;
+    align-items: center;
+    text-align: center;
+    top: 40%;
+    position: relative;
+    left: -0.45%;
+
+}
+
 #spin {
   display: block;
   text-align: center;
@@ -56,6 +69,15 @@
   grid-area: main;
   height: 100%;
   width: 100%;
+}
+
+.slotMachine {
+  width: 33.333333%;
+  border: 5px solid #CF5178;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 @keyframes App-logo-spin {

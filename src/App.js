@@ -6,6 +6,13 @@ import Bandit from './Bandit'
 
 class App extends Component {
   render() {
+
+    var names = ["ana.png", "cha.png", "franck.png", "gee.png", "gui.png", "raph.png"];
+    var icons = []
+    for(var i=0;i<3;i++){
+      icons.push(names)
+    }
+
     return (
       <div className="App">
         <header className="App-header">
@@ -13,7 +20,7 @@ class App extends Component {
         <main className="App-main">
 
           <div style={ {margin : 'auto auto'}}>
-            <Bandit></Bandit>
+            <Bandit icons={icons} ></Bandit>
             <button id="spin">Spin moi ça !</button>
           </div>
           
