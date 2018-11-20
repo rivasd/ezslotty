@@ -77,7 +77,8 @@
 
                 </audio>
                 <audio id="lose" src="public/lose.mp3">
-
+                </audio>
+                <audio id="cash" src="public/cash.wav">
                 </audio>
                 
             </div>
@@ -96,6 +97,7 @@
       const casino3 = document.querySelector('#casino3');
       const winaudio = document.querySelector('#turndown');
       const loseaudio = document.querySelector('#lose');
+      const cashaudio = document.querySelector('#cash');
 
       const mCasino1 = new SlotMachine(casino1, {
         active: 0,
@@ -133,6 +135,9 @@
         if(count == 0){
           if (mCasino1.visibleTile == mCasino2.visibleTile && mCasino2.visibleTile == mCasino3.visibleTile){
             winaudio.play();
+          }
+          else if(mCasino1.visibleTile != mCasino2.visibleTile && mCasino2.visibleTile != mCasino3.visibleTile && mCasino1.visibleTile != mCasino3.visibleTile){
+            cashaudio.play();
           }
           else{
             loseaudio.play();
