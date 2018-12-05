@@ -135,7 +135,8 @@ code {
 }
 
 .slot2 {
-  background-image: url("public/img/boxo.jpg")
+  background-image: url("public/img/boxo.jpg");
+  background-position: 61% 15%;
 }
 
 .slot3 {
