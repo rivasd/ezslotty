@@ -89,7 +89,7 @@
       </footer>
     </div>
     <script>
-      let count = 0;
+      var count = 0;
       const btnShuffle = document.querySelector('#casinoShuffle');
       const btnStop = document.querySelector('#casinoStop');
       const casino1 = document.querySelector('#casino1');
@@ -119,19 +119,7 @@
         mCasino3.shuffle(9999);
       });
 
-      btnStop.addEventListener('click', () => {
-        switch(count) {
-          case 3:
-            mCasino1.stop();
-            break;
-          case 2:
-            mCasino2.stop();
-            break;
-          case 1:
-            mCasino3.stop();
-            break;
-        }
-        count--;
+      function check_win(){
         if(count == 0){
           if (mCasino1.visibleTile == mCasino2.visibleTile && mCasino2.visibleTile == mCasino3.visibleTile){
             winaudio.play();
@@ -143,6 +131,22 @@
           else{
             loseaudio.play();
           }
+        }
+      }
+
+      btnStop.addEventListener('click', function(){
+        count--; //decrement global variable
+        switch(count) {
+          
+          case 2:
+            mCasino1.stop(check_win);
+            break;
+          case 1:
+            mCasino2.stop(check_win);
+            break;
+          case 0:
+            mCasino3.stop(check_win);
+            break;
         }
       });
 

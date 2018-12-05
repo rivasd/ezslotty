@@ -125,31 +125,36 @@ code {
     height: 100px;
     width:100%;
     background-repeat: no-repeat;
-    background-position-x: 55%;
+    background-position-x: 64%;
+    background-position-y: 2%;
+    background-size: 174px;
 }
 
 .slot1 {
-  background-image: url("public/img/ana.png")
+  background-image: url("public/img/anthony.jpg")
 }
 
 .slot2 {
-  background-image: url("public/img/franck.png")
+  background-image: url("public/img/boxo.jpg")
 }
 
 .slot3 {
-  background-image: url("public/img/gee.png")
+  background-image: url("public/img/manu.jpg")
 }
 
 .slot4 {
-  background-image: url("public/img/gui.png")
+  background-image: url("public/img/remy.jpg");
+  background-position: 59% 100%;
+  background-size: 258px;
 }
 
 .slot5 {
-  background-image: url("public/img/raph.png")
+  background-image: url("public/img/tom.jpg")
 }
 
 .slot6 {
-  background-image: url("public/img/cha.png")
+  background-image: url("public/img/xavier.jpg");
+  background-position: 26% 53%;
 }
 
 .btn {
